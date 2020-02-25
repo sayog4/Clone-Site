@@ -1,4 +1,4 @@
-# [Clone Site](https://github.com/sayog4/Clone-Site.git)
+# [Clone Site](https://sayog4.github.io/Clone-Site/)
 
 This is a cloned webpage which i saw on internet. I actually can't remember the name of that site.
 
