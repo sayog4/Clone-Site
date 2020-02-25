@@ -7,11 +7,15 @@ $('.hamburger-box').click(function() {
 })
 
 $(window).scroll(function(){
-  if ($(window).scrollTop() >= 250) {
+  if ($(window).scrollTop() >= 480) {
       $('.nav').addClass('fixed-nav');
+      $('.heading-1').addClass('mt');
+      $('.header__box').addClass('mt');
   }
   else {
       $('.nav').removeClass('fixed-nav');
+      $('.heading-1').removeClass('mt');
+      $('.header__box').removeClass('mt');
   }
 });
 

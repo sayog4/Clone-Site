@@ -117,11 +117,14 @@
   opacity: 0;
 }
 .fixed-nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: rgba(0,0,0,.7);
   box-shadow: 0 .1rem .2rem rgba($heading,.2);
   padding: 1.5rem 3rem;
+}
+.mt{
+  margin-top: 20vh;
 }
