@@ -1,0 +1,127 @@
+.nav{
+  display: flex;
+  align-items: center;
+  box-shadow: 0 .1rem .2rem rgba(0,0,0,.2);
+  border-bottom: 1px solid rgba($font,.3);
+  padding: 3rem 3rem;
+  z-index: 999;
+  &__brand{
+    font-size: 2.8rem;
+    font-style: italic;
+    text-transform: uppercase;
+    z-index: 10;
+
+    transition: all .2s;
+
+    &:hover{
+      color: $dark;
+      text-shadow: 0 .2rem .3rem rgba(0,0,0,.2);
+    }
+  }
+  &__list{
+    margin-left: auto;
+    font-size: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    // justify-items: center;
+    text-align: center;
+    transition: all .5s;
+    @media only screen and (max-width: $bp-nav){
+      position: absolute; 
+      font-size: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: -10%;
+    }
+  }
+  &__item{
+    @media only screen and (max-width: $bp-nav){
+      padding: 1rem;
+    }
+  }
+  &__link{
+    width: 100%;
+    border-bottom: 1.2px solid transparent;
+    border-top: 1.2px solid transparent;
+    transition: all .3s ease-in;
+
+    &:hover{
+      border-bottom: 1.2px solid $font;
+      
+      border-top: 1.2px solid $font;
+    }
+  }
+}
+.mobile-nav .nav__list{   
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background: coral;
+}
+.hamburger-box{
+  display: none;
+  cursor: pointer;
+  padding: .5rem;
+  z-index: 10;
+  @media only screen and (max-width: $bp-nav){
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
+}
+
+.hamburger{
+  position: relative;
+  display: inline-block;
+  height: .2rem;
+  width: 3rem;
+  background: $font;
+
+  transition: all ease-in-out .3s;
+
+  &:before,
+  &:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: $font;
+    left: 0;
+    transition: all ease-in-out .3s;
+  }
+  &:before{
+    transform: translateY(.8rem);
+  }
+  &:after{
+    transform: translateY(-.8rem);
+  }
+}
+.open .hamburger{
+  transform: rotate(45deg);
+}
+.open .hamburger:before{
+  transform: translateY(0) rotate(90deg);
+
+}
+.open .hamburger:after{
+  opacity: 0;
+}
+.fixed-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,.7);
+  box-shadow: 0 .1rem .2rem rgba($heading,.2);
+  padding: 1.5rem 3rem;
+}

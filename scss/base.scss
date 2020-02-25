@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+
+}
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 37.5%;
+  }
+
+}
+body{
+  line-height: 1.6;
+}
+.btn-outline:link,
+.btn-outline:visited{
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  padding: 1rem 2.5rem;
+  border: 1.2px solid currentColor;
+
+  transition: all .3s;
+
+  &:hover{
+    box-shadow: .3rem .3rem .4rem rgba($font,.3);
+    transform: translateY(-.5rem);
+  }
+  &:active{
+    transform: translateY(-.1rem);
+  }
+}
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  top: calc(50% - 4rem);
+  font-size: 4rem;
+  color: #000;
+  background: rgba($font,.6);
+  padding: 0 3rem;
+
+}
+.owl-carousel .owl-nav button.owl-prev {
+  left: 3%;
+}
+.owl-carousel .owl-nav button.owl-next {
+  right: 3%;
+}
